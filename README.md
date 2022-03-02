@@ -29,6 +29,8 @@
 <strong>Project Source:</strong> https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator
 
 <strong>Credits:</strong>
-Background Image: https://thedoctorwhosite.co.uk/dalek/types/4-original-supreme-black-dalek/
-Icon: https://findicons.com/icon/146054/dalek
-Font: https://www.1001fonts.com/dalek-font.html
+<ul>
+    <li>Background Image: https://thedoctorwhosite.co.uk/dalek/types/4-original-supreme-black-dalek/</li>
+    <li>Icon: https://findicons.com/icon/146054/dalek</li>
+    <li>Font: https://www.1001fonts.com/dalek-font.html</li>
+</ul>
