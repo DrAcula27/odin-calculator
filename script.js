@@ -26,16 +26,27 @@ function clearCalculator() {
     previousDisplayNumber.textContent = "";
 }
 
-//TODO - sign
 sign.addEventListener("click", () => {
     toggleSign();
 });
 
 function toggleSign() {
-
+    if (currentNum.indexOf("-") == 0) {
+        currentNum = currentNum.substring(1);
+    } else {
+        currentNum = "-" + currentNum;
+    }
+    currentDisplayNumber.textContent = currentNum;
 }
 
-//TODO - percent
+percent.addEventListener("click", () => {
+    convertToPercent();
+});
+
+function convertToPercent() {
+    currentNum /= 100;
+    currentDisplayNumber.textContent = currentNum;
+}
 
 undo.addEventListener("click", () => {
     handleDelete();
@@ -45,9 +56,9 @@ function handleDelete() {
     if (currentNum !== "") {
         currentNum = currentNum.slice(0, -1);
         currentDisplayNumber.textContent = currentNum;
-    if (currentNum === "") {
-        currentDisplayNumber.textContent = "0";
-    }
+        if (currentNum === "") {
+            currentDisplayNumber.textContent = "0";
+        }
     }
     if (currentNum === "" && previousNum !== "" && operator === "") {
         previousNum = previousNum.slice(0, -1);
@@ -128,12 +139,12 @@ function compute() {
     } else if (operator === "*") {
         previousNum *= currentNum;
     } else if (operator === "/") {
-        if (currentNum <= 0) {
+        if (currentNum === 0) {
             previousNum = ">:(";
             displayResults();
             return;
         }
-    previousNum /= currentNum;
+        previousNum /= currentNum;
     }
     previousNum = roundNumber(previousNum);
     previousNum = previousNum.toString();
@@ -145,10 +156,10 @@ function roundNumber(num) {
 }
 
 function displayResults() {
-    if (previousNum.length <= 11) {
+    if (previousNum.length <= 12) {
         currentDisplayNumber.textContent = previousNum;
     } else {
-        currentDisplayNumber.textContent = previousNum.slice(0, 11) + "...";
+        currentDisplayNumber.textContent = previousNum.slice(0, 12) + "...";
     }
         previousDisplayNumber.textContent = "";
         operator = "";
@@ -163,11 +174,11 @@ function handleKeyPress(e) {
     if (e.key >= 0 && e.key <= 9) {
         handleNumber(e.key);
     }
-    if (e.key === "Enter" || (e.key === "=" && currentNum != "" && previousNum != "")) {
-        compute();
-    }
     if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "*") {
         handleOperator(e.key);
+    }
+    if (e.key === "Enter" || (e.key === "=" && currentNum != "" && previousNum != "")) {
+        compute();
     }
     if (e.key === ".") {
         addDecimal();
@@ -177,5 +188,30 @@ function handleKeyPress(e) {
     }
     if (e.key === "Escape") {
         clearCalculator();
+    }
+    if (e.key === "~") {
+        toggleSign();
+    }
+    if (e.key === "%") {
+        convertToPercent();
+    }
+}
+
+//modal that shows keyboard shortcuts
+const modal = document.getElementById("modal");
+const btn = document.getElementById("modal-button");
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
 }
