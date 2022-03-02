@@ -10,8 +10,8 @@
     <li>An undo button, in case the user mis-clicks (or mis-types)</li>
     <li>Keyboard support</li>
 </ul>
-<em>NOTE: the calculator only evaluates one pair of numbers at a time, as per the specifications on the project page.</em>
-<br>
+<em><p>NOTE: the calculator only evaluates one pair of numbers at a time, as per the specifications on the project page.</p></em>
+
 <strong>After completing this project, I will have accomplished:</strong>
 <ul>
     <li>Continued improvement of version control using Git and GitHub</li>
