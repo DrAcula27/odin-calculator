@@ -16,12 +16,14 @@
 <ul>
     <li>Continued improvement of version control using Git and GitHub</li>
     <li>Understanding the DOM and how to manipulate it</li>
-    <li>Continued improvement of HTML, CSS, and JavaScript skills</li>
+    <li>Continued improvement of HTML, CSS, and JavaScript skills:</li>
+    <ul>
         <li>Importing custom fonts using HTML and CSS</li>
         <li>Using CSS pseudo elements to set a background image</li>
         <li>Practice with CSS flexbox and CSS grid</li>
         <li>Using JS to make HTML buttons function</li>
         <li>Practice breaking problems down into smaller, easy-to-solve problems</li>
         <li>Using JS to write functions to solve these small problems, and calling functions within functions to solve the larger problems</li>
+    </ul>
 </ul>
 <strong>Project Source:</strong> https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator
