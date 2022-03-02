@@ -7,12 +7,12 @@
     <li>Toggle whether the number is positive or negative</li>
     <li>Convert the number to a percentage</li>
     <li>Decimal input, without adding more than one decimal</li>
-    <li>An undo button, in case the user mis-clicks (or mis-types)</li>
+    <li>An undo button</li>
     <li>Keyboard support</li>
 </ul>
-<em><p>NOTE: the calculator only evaluates one pair of numbers at a time, as per the specifications on the project page.</p></em>
+<p><em>NOTE: the calculator only evaluates one pair of numbers at a time, as per the specifications on the project page.</em></p>
 
-<strong>After completing this project, I will have accomplished:</strong>
+<p><strong>After completing this project, I have accomplished:</strong></p>
 <ul>
     <li>Continued improvement of version control using Git and GitHub</li>
     <li>Understanding the DOM and how to manipulate it</li>
@@ -26,9 +26,10 @@
         <li>Using JS to write functions to solve these small problems, and calling functions within functions to solve the larger problems</li>
     </ul>
 </ul>
+
 <p><strong>Project Source:</strong> https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator</p>
 
-<strong>Credits:</strong>
+<p><strong>Credits:</strong></p>
 <ul>
     <li>Background Image: https://thedoctorwhosite.co.uk/dalek/types/4-original-supreme-black-dalek/</li>
     <li>Icon: https://findicons.com/icon/146054/dalek</li>
