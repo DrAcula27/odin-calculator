@@ -26,7 +26,7 @@
         <li>Using JS to write functions to solve these small problems, and calling functions within functions to solve the larger problems</li>
     </ul>
 </ul>
-<strong>Project Source:</strong> https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator
+<p><strong>Project Source:</strong> https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator</p>
 
 <strong>Credits:</strong>
 <ul>
