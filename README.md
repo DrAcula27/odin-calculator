@@ -11,7 +11,7 @@
     <li>Keyboard support</li>
 </ul>
 <em>NOTE: the calculator only evaluates one pair of numbers at a time, as per the specifications on the project page.</em>
-
+<br>
 <strong>After completing this project, I will have accomplished:</strong>
 <ul>
     <li>Continued improvement of version control using Git and GitHub</li>
