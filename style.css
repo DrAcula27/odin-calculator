@@ -1,8 +1,10 @@
+@import url(//db.onlinewebfonts.com/c/439c1da54ec2dc6d1063cde55009bde0?family=Dalek);
+
 :root { /*set color global variables*/
     --primary-dark: #383838;
     --primary-light: #efefef;
     --secondary-dark: #858585;
-    --secondary-light: #aaaaaa;
+    --secondary-light: #c0c0c0;
     --blue: #1da8eb;
     --dark-blue: #0f5475;
     --black: #000000;
@@ -44,6 +46,7 @@ h1 {
 .title {
     text-align: center;
     font-size: 80px;
+    font-family: "Dalek", 'Roboto', sans-serif;
 }
 
 
@@ -72,7 +75,7 @@ h1 {
     z-index: -1;
 }
 
-.container {
+.calculator-container {
     background-color: var(--secondary-dark);
     width: 400px;
     height: 500px;
@@ -83,7 +86,7 @@ h1 {
     align-items: center;
 }
 
-.display {
+.output {
     background-color: var(--primary-light);
     margin: 1rem;
     width: 90%;
@@ -91,10 +94,18 @@ h1 {
     border: 2px solid var(--dark-blue);
     border-radius: 1rem;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: end;
-    align-items: center;
-    font-size: 50px;
-    padding-right: 2px;
+    padding-right: 0.5rem;
+}
+
+.previousNumber {
+    font-size: 20px;
+}
+
+.currentNumber {
+    font-size: 40px;
 }
 
 .buttons {
@@ -106,19 +117,25 @@ h1 {
     gap: 3px;
 }
 
-input {
+button {
     background-color: var(--primary-light);
     border: 2px solid var(--dark-blue);
     border-radius: 1rem;
     font-size: 24px;
-    transition: transform 0.3s ease-in-out;
 }
 
-input:hover {
+button:hover {
     cursor: pointer;
     background: var(--blue);
-    transform: scale(1.02);
     box-shadow: 0 0 1rem var(--dark-blue);
+}
+
+button.clear, button.sign, button.percent, button.undo {
+    background-color: var(--secondary-light);
+}
+
+button.operator, button.equal {
+    background-color: var(--blue);
 }
 
 
